@@ -1,0 +1,71 @@
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    width: fit-content; /* Adjust width as needed */
+  }
+  
+  .testimonial {
+    display: flex;
+    flex: 1; /* Ensures equal width for all testimonials */
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .testimonial img {
+    width: 20%;
+    object-fit: cover; /* Ensures image fills container */
+    border-radius: 50%; /* Adjust as needed for image style */
+  }
+  
+  .testimonial-content {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .testimonial.center {
+    flex: 1.5; /* Makes center testimonial larger */
+    transform: scale(1.1); /* Optional: Increase center size slightly */
+  }
+  
+  .prev-btn,
+  .next-btn {
+    display: none; /* Hide buttons initially */
+  }
+  
+  /* Media query for responsive behavior (optional) */
+  @media only screen and (max-width: 768px) {
+    .testimonial-slider {
+      flex-wrap: wrap; /* Wrap testimonials on smaller screens */
+    }
+  
+    .testimonial {
+      flex: unset; /* Remove equal width on smaller screens */
+      width: 100%;
+    }
+  
+    .testimonial img {
+      width: 100%; /* Adjust image width as needed */
+    }
+  
+    .prev-btn,
+    .next-btn {
+      display: block; /* Show buttons on smaller screens */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 5px;
+    }
+  
+    .prev-btn {
+      left: 10px;
+    }
+  
+    .next-btn {
+      right: 10px;
+    }
+  }
+  
